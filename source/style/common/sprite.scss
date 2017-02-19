@@ -9,33 +9,33 @@
 //
 // At the bottom of this section, we provide information about the spritesheet itself
 // $spritesheet: width height image $spritesheet-sprites;
-$bg2-name: 'bg2';
-$bg2-x: 0px;
-$bg2-y: 0px;
-$bg2-offset-x: 0px;
-$bg2-offset-y: 0px;
-$bg2-width: 1100px;
-$bg2-height: 649px;
-$bg2-total-width: 1100px;
-$bg2-total-height: 763px;
-$bg2-image: 'sprite.png';
-$bg2: (0px, 0px, 0px, 0px, 1100px, 649px, 1100px, 763px, 'sprite.png', 'bg2', );
-$viking-name: 'viking';
-$viking-x: 0px;
-$viking-y: 649px;
-$viking-offset-x: 0px;
-$viking-offset-y: -649px;
-$viking-width: 100px;
-$viking-height: 114px;
-$viking-total-width: 1100px;
-$viking-total-height: 763px;
-$viking-image: 'sprite.png';
-$viking: (0px, 649px, 0px, -649px, 100px, 114px, 1100px, 763px, 'sprite.png', 'viking', );
-$spritesheet-width: 1100px;
-$spritesheet-height: 763px;
+$bg-welcome-name: 'bg_welcome';
+$bg-welcome-x: 0px;
+$bg-welcome-y: 0px;
+$bg-welcome-offset-x: 0px;
+$bg-welcome-offset-y: 0px;
+$bg-welcome-width: 2250px;
+$bg-welcome-height: 1125px;
+$bg-welcome-total-width: 2250px;
+$bg-welcome-total-height: 1960px;
+$bg-welcome-image: 'sprite.png';
+$bg-welcome: (0px, 0px, 0px, 0px, 2250px, 1125px, 2250px, 1960px, 'sprite.png', 'bg_welcome', );
+$hero-img-name: 'heroImg';
+$hero-img-x: 0px;
+$hero-img-y: 1125px;
+$hero-img-offset-x: 0px;
+$hero-img-offset-y: -1125px;
+$hero-img-width: 455px;
+$hero-img-height: 835px;
+$hero-img-total-width: 2250px;
+$hero-img-total-height: 1960px;
+$hero-img-image: 'sprite.png';
+$hero-img: (0px, 1125px, 0px, -1125px, 455px, 835px, 2250px, 1960px, 'sprite.png', 'heroImg', );
+$spritesheet-width: 2250px;
+$spritesheet-height: 1960px;
 $spritesheet-image: 'sprite.png';
-$spritesheet-sprites: ($bg2, $viking, );
-$spritesheet: (1100px, 763px, 'sprite.png', $spritesheet-sprites, );
+$spritesheet-sprites: ($bg-welcome, $hero-img, );
+$spritesheet: (2250px, 1960px, 'sprite.png', $spritesheet-sprites, );
 
 // The provided mixins are intended to be used with the array-like variables
 //

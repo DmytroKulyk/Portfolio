@@ -1,0 +1,20 @@
+body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Roboto', Arial, sens-serife;
+  font-size: 14px;
+  line-height: 1.42;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrapper{
+  min-height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}

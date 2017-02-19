@@ -1,6 +1,11 @@
-body {
-  margin: 0;
-}
+$text_color: #ffffff;
+$green: #619055;
+//fonts
+$robo_medium: "robotomedium";
+$robo_reg: 'robotoregular';
+$robo_med: 'robotomedium';
 
 @import 'common/greating';
-@import 'common/sprite';
+@import 'layout/setups';
+@import 'layout/fonts';
+
