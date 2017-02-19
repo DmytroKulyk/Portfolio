@@ -1,0 +1,30 @@
+extends ../layout
+
+block title
+    title about
+
+block content
+    .wrapper
+        section.section.hero
+            .hero__bg
+
+            .hero_container
+                svg.about-text-svg
+                    use(xlink:href='./assets/img/sprite.svg#portfolio_header')
+
+            include ./../sections/user.pug
+
+        section.section.about
+            .about__col.about__col_left
+                svg.about__triangle
+                .section-title About me
+
+                .about
+                    .about__pic
+                    .block-title
+                    .block-text
+
+            .about__col.about__col_right
+                svg.about__triangle
+                .section-title
+

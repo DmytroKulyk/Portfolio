@@ -1,2 +1,36 @@
-extends ../_welcome.pug
+extends ../layout
 
+block title
+    title main
+
+block content
+    .wrapper
+        .maincontent
+            section.section.welcome-page
+                .sign-in-button Sign in
+                .l-main-window
+
+                    .l-page-autorization
+                    include ./../sections/user.pug
+
+                    ul.social-icons
+                        li.social-icons__item.social-icons__item-vk
+                            a.social__link(href="#")
+                                svg.vk-icon
+                                    use(xlink:href='./assets/img/sprite.svg#vk')
+                        li.social-icons__item.social-icons__item-git
+                            a.social__link(href="#")
+                                svg.git-icon
+                                    use(xlink:href='./assets/img/sprite.svg#github')
+                        li.social-icons__item.social-icons__item-in
+                            a.social__link(href="#")
+                                svg.in-icon
+                                    use(xlink:href='./assets/img/sprite.svg#in')
+
+                    ul.menu-links
+                        li.munu-links__item
+                            a.menu-link_my-projects My projects
+                        li.munu-links__item
+                            a.menu-link_about(href="about.html") About Me
+                        li.munu-links__item
+                            a.menu-link_blog Blog
