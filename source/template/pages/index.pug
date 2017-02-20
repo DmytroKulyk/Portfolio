@@ -11,21 +11,11 @@ block content
                 .l-main-window
 
                     .l-page-autorization
-                    include ./../sections/user.pug
 
-                    ul.social-icons
-                        li.social-icons__item.social-icons__item-vk
-                            a.social__link(href="#")
-                                svg.vk-icon
-                                    use(xlink:href='./assets/img/sprite.svg#vk')
-                        li.social-icons__item.social-icons__item-git
-                            a.social__link(href="#")
-                                svg.git-icon
-                                    use(xlink:href='./assets/img/sprite.svg#github')
-                        li.social-icons__item.social-icons__item-in
-                            a.social__link(href="#")
-                                svg.in-icon
-                                    use(xlink:href='./assets/img/sprite.svg#in')
+                    .user-welcome
+                        include ./../sections/user.pug
+
+
 
                     ul.menu-links
                         li.munu-links__item
@@ -34,3 +24,6 @@ block content
                             a.menu-link_about(href="about.html") About Me
                         li.munu-links__item
                             a.menu-link_blog Blog
+
+                    ul.socials-welcome
+                        include ./../sections/social_icons.pug

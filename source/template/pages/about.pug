@@ -6,25 +6,132 @@ block title
 block content
     .wrapper
         section.section.hero
+
+
             .hero__bg
 
             .hero_container
                 svg.about-text-svg
                     use(xlink:href='./assets/img/sprite.svg#portfolio_header')
 
-            include ./../sections/user.pug
+            .user-about
+                include ./../sections/user.pug
+
+            ul.socials-about
+                include ./../sections/social_icons.pug
 
         section.section.about
             .about__col.about__col_left
-                svg.about__triangle
+                svg(viewBox="0 0 1000 110" preserveAspectRatio="none").about__triangle
+                   polygon(points="0,0 0,110 1000,110")
+
                 .section-title About me
+                    svg.about_svg
+                        use(xlink:href='./assets/img/sprite.svg#about_header')
 
                 .about
                     .about__pic
+                        img(src="assets/img/heroImg.png" alt="owner img").about__pic-img
+
                     .block-title
+                        .section-title  Who am I?
+
                     .block-text
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!
 
             .about__col.about__col_right
-                svg.about__triangle
-                .section-title
+                        svg(viewBox="0 0 1000 110" preserveAspectRatio="none").about__triangle
+                            polygon(points="0,110 1000,110 1000,0")
+                        .skills
+                            .block-title
+                                .section-title  How can I help you
+                            .skills__text
+                                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!
+
+                            ul.skills-group
+                                li.skills-group__item
+                                    .skills-group__title Frontend
+                                        ul.skills-list
+                                            li.skills-list__item
+                                                .skill HTML5
+                                                svg.skill__circle
+                                                    circle(cx="50" cy="50" r="40").skills__circle-under
+                                                    circle(cx="50" cy="50" r="40").skill__circle-above
+                                            li.skills-list__item
+                                                .skill CSS3
+                                                svg.skill__circle
+                                                    circle(cx="50" cy="50" r="40").skills__circle-under
+                                                    circle(cx="50" cy="50" r="40").skill__circle-above
+                                            li.skills-list__item
+                                                .skill JavaScript & jQuery
+                                                svg.skill__circle
+                                                    circle(cx="50" cy="50" r="40").skills__circle-under
+                                                    circle(cx="50" cy="50" r="40").skill__circle-above
+                                li.skills-group__item
+                                    .skills-group__title Backend
+                                        ul.skills-list
+                                            li.skills-list__item
+                                                .skill PHP
+                                                svg.skill__circle
+                                                    circle(cx="50" cy="50" r="40").skills__circle-under
+                                                    circle(cx="50" cy="50" r="40").skill__circle-above
+                                            li.skills-list__item
+                                                .skill mySQL
+                                                svg.skill__circle
+                                                    circle(cx="50" cy="50" r="40").skills__circle-under
+                                                    circle(cx="50" cy="50" r="40").skill__circle-above
+                                            li.skills-list__item
+                                                .skill Node.js & npm
+                                                svg.skill__circle
+                                                    circle(cx="50" cy="50" r="40").skills__circle-under
+                                                    circle(cx="50" cy="50" r="40").skill__circle-above
+                                            li.skills-list__item
+                                                .skill Mongo.db
+                                                svg.skill__circle
+                                                    circle(cx="50" cy="50" r="40").skills__circle-under
+                                                    circle(cx="50" cy="50" r="40").skill__circle-above
+                                li.skills-group__item
+                                    .skills-group__title WorkFlow
+                                        ul.skills-list
+                                            li.skills-list__item
+                                                .skill Git
+                                                svg.skill__circle
+                                                    circle(cx="50" cy="50" r="40").skills__circle-under
+                                                    circle(cx="50" cy="50" r="40").skill__circle-above
+                                            li.skills-list__item
+                                                .skill Gulp
+                                                svg.skill__circle
+                                                    circle(cx="50" cy="50" r="40").skills__circle-under
+                                                    circle(cx="50" cy="50" r="40").skill__circle-above
+                                            li.skills-list__item
+                                                .skill Bower
+                                                svg.skill__circle
+                                                    circle(cx="50" cy="50" r="40").skills__circle-under
+                                                    circle(cx="50" cy="50" r="40").skill__circle-above
+
+
+
+
+        section.section.map
+            .contact-window
+                .block-title
+                    .section-title Contacts
+                    ul.contacts-list
+                        li.contacts-list_item
+                            svg.contact_svg
+                                use(xlink:href='./assets/img/sprite.svg#skype')
+                            .skype_title.item-title fanat875
+                        li.contacts-list_item
+                            svg.contact_svg
+                                use(xlink:href='./assets/img/sprite.svg#envelope2')
+                            .email_text.item-title dmytrokulyk@yahoo.com
+                        li.contacts-list_item
+                            svg.contact_svg
+                                use(xlink:href='./assets/img/sprite.svg#phone')
+                            .phone.item-title  +1 261 289 4698
+                        li.contacts-list_item
+                            svg.contact_svg
+                                use(xlink:href='./assets/img/sprite.svg#map_marker')
+                            .adress.item-title 266 Mission str San Francisco CA
 
