@@ -1,7 +1,7 @@
  @import "./sprite";
 
-.section{
-  @include sprite($bg-welcome);
+.welcome-page{
+  background: url('../img/bg_welcome.png');
   height: 100vh;
   width: 100%;
   position: relative;
@@ -31,9 +31,7 @@
    height: 395px;
    text-align: center;
    margin: 0 auto;
-   position: relative;
-   top: 50%;
-   transform: translateY(-50%);
+   @include centered(both);
  }
  .l-page-autorization{
   width: 380px;
@@ -45,63 +43,6 @@
    position: absolute; 
 }
 
-.c-hero-pic{
-  @include sprite($hero-img);
-  background-position: -139px -1135px;
-  border-radius:50%;
-  width: 150px;
-  height: 150px;
-  position: absolute;
-  z-index: 100;
-  margin-top: 40px;
-  margin-left: 30%;
-  text-align: center;
-}
- .c-hero-title{
-   position: absolute;
-   z-index: 100;
-   top: 180px;
- }
- .hero-title_text{
-  color: $text_color;
-   font-family: $robo_med;
-   font-size: 28px;
-   margin-left: 100px;
-}
-
- .c-hero-page-description{
-   color: $text_color;
-   position: absolute;
-   bottom: 135px;
-   font-family: $robo_reg;
-   font-size: 16px;
-   margin-left: 110px;
-   z-index: 100;
-   opacity: .7;
- }
-
- // social-link-icons
- .social-icons{
-    position: absolute;
-    z-index:100;
-   bottom: 75px;
-   margin-left: 80px;
- }
-
-
- .social-icons__item{
-   display: inline;
- }
- .vk-icon, .git-icon, .in-icon{
-   height: 25px;
-   width: 35px;
-   margin: 15px;
-   fill: #919f9c;
-   opacity: .8;
-   &:hover {
-     fill: #4e8839;
-   }
- }
 
 // menu links
  .menu-links{
@@ -113,7 +54,7 @@
 
  .munu-links__item{
    display: inline;
-   color: $text_color;
+
    padding: 15px 30px 15px 32px;
    font-family: $robo_medium;
    font-size: 16px;
@@ -129,5 +70,7 @@
    &:hover{
      background: #4e8839;
    }
-
+   & a {
+     color: $text_color;
+   }
  }

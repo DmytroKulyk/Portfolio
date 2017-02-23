@@ -1,11 +1,34 @@
+//colors
 $text_color: #ffffff;
 $green: #619055;
+$light-green: #ebefe2;
+$dark-white: #f4f5f0;
+$title_color: #373e42;
+$dark_green: #566358;
+$blocg_col: #faf8f0;
 //fonts
 $robo_medium: "robotomedium";
+$robo_light: 'robotolight';
 $robo_reg: 'robotoregular';
 $robo_med: 'robotomedium';
+$robo_bold: 'robotobold';
+$robo_ital: 'robotoitalic';
+$sansus: 'sansus_regular';
+
+@import 'helpers/mixins';
 
 @import 'common/greating';
+@import 'common/hero';
+@import 'common/about';
+@import 'common/blog';
+
+@import 'blocks/user';
+@import 'blocks/section-title';
+@import 'blocks/skill';
+@import 'blocks/social';
+@import 'blocks/footer';
+
 @import 'layout/setups';
 @import 'layout/fonts';
+
 

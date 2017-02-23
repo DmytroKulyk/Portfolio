@@ -25,7 +25,7 @@ block content
                 svg(viewBox="0 0 1000 110" preserveAspectRatio="none").about__triangle
                    polygon(points="0,0 0,110 1000,110")
 
-                .section-title About me
+                .section-title.about-title About me
                     svg.about_svg
                         use(xlink:href='./assets/img/sprite.svg#about_header')
 
@@ -34,7 +34,7 @@ block content
                         img(src="assets/img/heroImg.png" alt="owner img").about__pic-img
 
                     .block-title
-                        .section-title  Who am I?
+                        .section-title.about-title  Who am I?
 
                     .block-text
                         p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!
@@ -45,7 +45,7 @@ block content
                             polygon(points="0,110 1000,110 1000,0")
                         .skills
                             .block-title
-                                .section-title  How can I help you
+                                .section-title.about-title   How can I help you
                             .skills__text
                                 p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!
 
@@ -134,4 +134,6 @@ block content
                             svg.contact_svg
                                 use(xlink:href='./assets/img/sprite.svg#map_marker')
                             .adress.item-title 266 Mission str San Francisco CA
+            .footer
+                include ./../sections/footer.pug
 

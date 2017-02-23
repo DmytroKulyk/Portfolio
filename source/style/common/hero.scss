@@ -1,0 +1,24 @@
+.hero{
+  height: 600px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.hero__bg{
+  @include sprite($bg-welcome);
+  @include centered(x);
+  width: 100%;
+  background-size: cover;
+}
+
+
+.about-text-svg{
+  display: block;
+  margin: 0 auto;
+  @include centered(y);
+  width: 100%;
+  height:300px;
+  fill: $text_color;
+  opacity: .3;
+}

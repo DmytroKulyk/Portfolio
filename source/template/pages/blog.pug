@@ -1,0 +1,61 @@
+extends ../layout
+
+block title
+    title Blog
+
+block content
+    .wrapper
+        section.section.hero
+
+            .hero__bg
+
+            .hero_container
+
+            .user-about
+                .user__pic-container
+                    .user__pic
+                    .section-title
+                        .blog-title Blog
+                    .user__desc Articles that I wrote
+
+            ul.socials-about
+                include ./../sections/social_icons.pug
+
+            .blog-triangle-container.blog-triagle__left
+                svg(viewBox="0 0 1000 110" preserveAspectRatio="none").blog__triangle
+                    polygon(points="0,0 0,110 1000,110")
+            .blog-triangle-container.blog-triagle__right
+                svg(viewBox="0 0 1000 110" preserveAspectRatio="none").blog__triangle
+                    polygon(points="0,110 1000,110 1000,0")
+
+        section.section.blog
+            .blog__col.blog__col_right
+                ul.articles-list
+                    li.article-item.article-item_active
+                        a.article-title Why Sass?
+                    li.article-item
+                        a.article-title Getting Started with Pug Jade
+                    li.article-item
+                        a.article-title Adding an existing project to GitHub using the command line
+                    li.article-item
+                        a.article-title What is Gulp used for?
+                    li.article-item
+                        a.article-title HTML5 ★ BOILERPLATE
+
+            .blog__col.blog__col_left
+                ul.blog-articles
+                    li.blog-articles__item
+                        .blog-articles__item_title Why Sass?
+                            .blog-articles__item_date 02/10/2017
+                        .blog-articles__item_text
+                            p That was the thinking anyway. But the reality is that Sass (and other CSS preprocessors) can be a powerful ally—a tool that any style-crafter can easily insert into their daily work. It took me a while to come around, but I’m sure glad that I did.
+                            p And that’s the reason I wanted to write this little book. To share how I’ve been able to use Sass to be more efficient, while maintaining the process I’ve become comfortable with from writing CSS for the last ten years. I had many misconceptions about Sass that prevented me from giving it a go, initially. I was worried I’d have to completely alter the way I write and manage stylesheets. As CSS can be fragile at times, it’s understandable for its authors to be somewhat protective about their creation. Can I get an amen?
+                    li.blog-articles__item
+                        .blog-articles__item_title Getting Started with Pug Jade
+                            .blog-articles__item_date 02/15/2017
+                        .blog-articles__item_text
+                            p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                            p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        .footer
+            include ./../sections/footer.pug
+

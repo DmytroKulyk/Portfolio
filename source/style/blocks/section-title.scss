@@ -1,0 +1,32 @@
+.section-title{
+  font-size: 63px;
+  color: $title_color;
+  @include centered(x);
+  font-family: $sansus;
+  padding: 30px 80px;
+  display: inline-block;
+  position: relative;
+  z-index: 10;
+  bottom: 0;
+}
+
+.about-title{
+  &:after{
+    content: "";
+    display: block;
+    width: 90px;
+    height: 3px;
+    left:40%;
+    background: $title_color;
+    @include centered(x);
+  }
+}
+.about_svg{
+  position: absolute;
+  @include centered(both);
+  z-index: -1;
+  fill: #e2ebd0;
+  width: 400px;
+  top: 40%;
+}
+

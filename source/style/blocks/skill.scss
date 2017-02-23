@@ -1,0 +1,18 @@
+.skill__circle{
+  width: 100px;
+  height: 100px;
+  display: block;
+  fill: transparent;
+  stroke-width: 15;
+  stroke: red;
+}
+
+.skills__circle-under{
+   stroke: #dfdcd5;
+}
+
+
+.skill__circle-above{
+  stroke: #74a163;
+  stroke-dasharray: 100;
+}

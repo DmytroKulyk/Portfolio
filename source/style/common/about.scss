@@ -1,0 +1,135 @@
+.about{
+  @extend %clearfix;
+}
+
+.about__col {
+  float: left;
+  width: 50%;
+  position: relative;
+  height: 860px;
+
+  &_left{
+    background: $light-green;
+
+    .about__triangle{
+      left: 0;
+      fill: $light-green;
+    }
+  }
+  &_right{
+    background: $dark-white;
+
+    .about__triangle{
+      right: 0;
+      fill: $dark-white;
+    }
+
+  }
+
+}
+
+.about__triangle {
+  display: block;
+  width: 100%;
+  height: 110px;
+  position: absolute;
+  bottom: 100%;
+}
+
+.about__pic{
+  margin: 0 auto 20px auto;
+  height: 390px;
+  width: 440px;
+  overflow: hidden;
+}
+
+.block-title .section-title{
+  font-size: 35px;
+  color: $dark_green;
+  padding-top: 45px;
+  padding-bottom: 15px;
+}
+
+.block-text{
+  color: $dark_green;
+  width: 440px;
+  margin: 0 auto;
+}
+
+.skills__text{
+  color: $dark_green;
+  font-size: 16px;
+  margin: 34px 30px ;
+}
+.skills-group{
+  margin: 20px 30px;
+}
+
+
+.skills-group__title{
+  font-family:$robo_medium;
+  font-size: 28px;
+  color: $dark_green;
+  margin-bottom: 20px;
+}
+
+.skills-list__item{
+  display: inline-block;
+  position: relative;
+  margin-bottom: 30px;
+}
+.skill{
+  font-size: 12px;
+  @include centered(both);
+}
+
+
+.map {
+  background: url('../img/map.png') center center;
+  background-size: cover;
+  height: 975px;
+  position: relative;
+}
+
+.contact-window .section-title{
+  margin-bottom: 25px;
+}
+
+//Contact Window
+
+.contact-window{
+  position: absolute;
+  top: 41%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 380px;
+  height: 310px;
+  border-radius: 5px;
+  background-color: rgb(244, 245, 240);
+  opacity: 0.8;
+  margin-bottom: 250px;
+}
+
+.contact_svg{
+  width: 25px;
+  height: 21px;
+  fill: #6c9c5a;
+  margin-right: 10px;
+}
+.contact_svg, .item-title{
+  display: inline-block;
+  vertical-align: middle;
+}
+.contacts-list_item{
+  margin-bottom: 20px;
+  margin-left: 41px;
+}
+
+.item-title{
+  font-family:$robo_med;
+  font-size: 16px;
+  color: #65777c;
+}
+
+
+

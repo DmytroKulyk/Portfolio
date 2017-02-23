@@ -1,0 +1,33 @@
+.socials-welcome{
+  position: absolute;
+  z-index: 100;
+  bottom: 80px;
+  @include centered(x);
+}
+
+.socials-about{
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  & .socials__icon{
+    fill: white;
+    opacity: 1;
+  }
+
+
+}
+
+.social__item{
+  display: inline-block;
+  vertical-align: middle;
+}
+.socials__icon{
+  height: 35px;
+  width: 25px;
+  margin: 15px;
+  fill: #919f9c;
+  opacity: .8;
+  &:hover {
+    fill: #4e8839;
+  }
+}
