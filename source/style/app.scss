@@ -21,12 +21,14 @@ $sansus: 'sansus_regular';
 @import 'common/hero';
 @import 'common/about';
 @import 'common/blog';
+@import 'common/project';
 
 @import 'blocks/user';
 @import 'blocks/section-title';
 @import 'blocks/skill';
 @import 'blocks/social';
 @import 'blocks/footer';
+@import "blocks/burger";
 
 @import 'layout/setups';
 @import 'layout/fonts';

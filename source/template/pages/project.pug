@@ -1,0 +1,59 @@
+extends ../layout
+
+block title
+    title project
+
+block content
+    .wrapper
+        section.section.projects
+
+
+            .hero__bg
+
+            .hero_container
+                svg.about-text-svg
+                    use(xlink:href='./assets/img/sprite.svg#portfolio_header')
+
+            .user-about
+                include ./../sections/user.pug
+
+            ul.socials-about
+                include ./../sections/social_icons.pug
+
+            include ./../sections/hamburger.pug
+
+            .projects-triangle-container.projects-triagle__left
+                svg(viewBox="0 0 1000 110" preserveAspectRatio="none").projects__triangle
+                    polygon(points="0,0 0,110 1000,110")
+            .projects-triangle-container.projects-triagle__right
+                svg(viewBox="0 0 1000 110" preserveAspectRatio="none").projects__triangle
+                    polygon(points="0,110 1000,110 1000,0")
+
+            .project-title
+                .projects-title_text My projects
+                    svg.projects_svg
+                        use(xlink:href='./assets/img/sprite.svg#works_header')
+
+        section.section.project-block
+            .project__col.project__col_left
+                ul.project-list
+                    li.project-list_item
+                        .project-list_item-information
+                            .project-list_item-title On line school website
+                            .project-list_item-components HTML CSS JAVASCRIPT
+                            .project-list_item-button
+                                svg.project-link_svg
+                                    use(xlink:href='./assets/img/sprite.svg#link')
+                                .project-button-title Check website
+
+
+            .project__col.project__col_right
+                ul.projects-img-carusel
+                    li.projects-img-carusel__item
+                        .projects-img-carusel__item-link
+                            a(href="#" atl="project")
+                                img(src='assets/img/loft.png').projects-img-carusel__item-img
+
+
+        .footer
+            include ./../sections/footer.pug

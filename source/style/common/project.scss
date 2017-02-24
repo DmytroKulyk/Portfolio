@@ -1,0 +1,146 @@
+.projects{
+  height: 700px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  @extend %clearfix;
+}
+
+.project-block{
+  margin-bottom: 200px;
+}
+.hero_container{
+  @extend %clearfix;
+}
+
+.projects-triangle-container{
+  float: left;
+  width: 50%;
+  fill: $blocg_col;
+}
+
+.projects__triangle{
+  display: block;
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  bottom: 0%;
+}
+
+//project title
+
+.project-title{
+  font-size: 63px;
+  color: #373e42;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: $robo-bold;
+  padding: 30px 80px;
+  position: absolute;
+  z-index: 10;
+  top: 80%;
+}
+
+
+.projects-title_text{
+  &:after{
+    content: "";
+    display: block;
+    width: 90px;
+    height: 3px;
+    left:40%;
+    background: #373e42;
+    @include centered(x);
+  }
+}
+.projects_svg{
+  position: absolute;
+  @include centered(both);
+  z-index: -1;
+  fill: #e2ebd0;
+  width: 400px;
+  top: 40%;
+}
+
+// projects left
+.project-block{
+  @extend %clearfix;
+}
+.project__col{
+  float: left;
+  width: 50%;
+}
+.project-list_item-information{
+  height: 760px;
+  background: #ebefe2;
+  overflow: hidden;
+  text-align: center;
+}
+
+.project-list_item-title{
+  font-size: 63px;
+  color: $title_color;
+  @include centered(x);
+  font-family: $robo_bold;
+  padding: 30px 80px;
+  display: inline-block;
+  position: relative;
+  z-index: 10;
+  bottom: 0;
+  margin-top: 30%;
+  &:after {
+    content: "";
+    display: block;
+    width: 90px;
+    height: 3px;
+    left: 40%;
+    @include centered(x);
+    background: $title_color;
+  }
+}
+
+.project-list_item-components{
+  font-size: 16px;
+  font-family: $robo_med;
+  color: #4e8839;
+  margin-bottom: 60px;
+}
+.project-link_svg{
+  fill: $text_color;
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+  margin-left: 0;
+}
+
+.project-list_item-button{
+  width: 200px;
+  padding: 16px 20px;
+  border: 1px solid #6c9c5a;
+  border-radius: 20px;
+  background: #6c9c5a;
+  margin: 0 auto;
+}
+.project-button-title{
+ display: inline-block;
+  font-size: 16px;
+  font-family: $robo_med;
+  color: $text_color;
+  margin-left: 10px;
+}
+
+// project right
+
+.project__col_right{
+  background: #e1e4d7;
+  height: 760px;
+}
+
+.projects-img-carusel__item-link{
+  height: 540px;
+  width: 100%;
+  margin-top: 60px;
+}
+.projects-img-carusel__item-img{
+  max-width: 100%;
+}
