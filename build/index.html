@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>main</title>
+    <meta content="" name="author">
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link rel="stylesheet" href="/assets/css/foundation.css">
+    <link rel="stylesheet" href="/assets/css/app.css">
+    <script src="/assets/js/foundation.js" defer></script>
+    <script src="/assets/js/app.js" defer></script><!--[if lt IE 9]>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="maincontent">
+        <section class="section welcome-page">
+          <div class="sign-in-button">Sign in</div>
+          <div class="l-main-window">
+            <div class="l-page-autorization">
+              <div class="user-welcome-form user-welcome-form__front">
+                <div class="user__pic-container">
+                  <div class="user__pic"></div>
+                  <div class="user__name">Dmytro Kulyk</div>
+                  <div class="user__desc">Developer's webpage</div>
+                </div>
+                <ul class="menu-links">
+                  <li class="munu-links__item"><a class="menu-link_my-projects" href="project.html">My projects</a></li>
+                  <li class="munu-links__item"><a class="menu-link_about" href="about.html">About Me</a></li>
+                  <li class="munu-links__item"><a class="menu-link_blog" href="blog.html">Blog</a></li>
+                </ul>
+                <ul class="socials-welcome">
+                  <li class="social__item"><a class="socials__link" href="#">
+                      <svg class="socials__icon">
+                        <use xlink:href="./assets/img/sprite.svg#vk"></use>
+                      </svg></a></li>
+                  <li class="social__item"><a class="socials__link" href="#">
+                      <svg class="socials__icon">
+                        <use xlink:href="./assets/img/sprite.svg#github"></use>
+                      </svg></a></li>
+                  <li class="social__item"><a class="socials__link" href="#">
+                      <svg class="socials__icon">
+                        <use xlink:href="./assets/img/sprite.svg#in"></use>
+                      </svg></a></li>
+                </ul>
+              </div>
+              <div class="user-welcome-form user-welcome-form__back">
+                <div class="back-window">
+                  <div class="back-window_title">Authorization</div>
+                  <form class="back-window__form">
+                    <div class="form-block__login">
+                      <div class="form-block__login-svg">
+                        <svg class="login_svg">
+                          <use xlink:href="./assets/img/sprite.svg#login"></use>
+                        </svg>
+                      </div>
+                      <input class="back-window__form-input login-input" type="text" name="login" placeholder="Login">
+                    </div>
+                    <div class="form-block__password">
+                      <div class="form-block__login-svg">
+                        <svg class="password_svg">
+                          <use xlink:href="./assets/img/sprite.svg#password"></use>
+                        </svg>
+                      </div>
+                      <input class="back-window__form-input passsword-inpu" type="password" name="password" placeholder="Password">
+                    </div>
+                    <input class="back-window__form-input_checkbox" type="checkbox" name="robot" id="robot">
+                    <label class="back-window__form-label" for="robot">I am not a robot</label>
+                    <div class="back-window__form-question">Are you sure, your aren't a robot?</div>
+                    <input class="back-window__form-input_radio" type="radio" id="question_yes" name="question">
+                    <label class="back-window__form-label back-window__form-label-yes" for="question_yes">Yes</label>
+                    <input class="back-window__form-input_radio" type="radio" id="question_no" name="question">
+                    <label class="back-window__form-label" for="question_no">No</label>
+                    <div class="back-window__form-buttonts">
+                      <input class="welcome-form_button-sign-in" type="submit" value="Sign In">
+                      <input class="welcome-form_button-main-page" type="button" value="Main page">
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
