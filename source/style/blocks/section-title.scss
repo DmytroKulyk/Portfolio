@@ -1,24 +1,40 @@
 .section-title{
-  font-size: 63px;
-  color: $title_color;
   @include centered(x);
-  font-family: $sansus;
   padding: 30px 80px;
   display: inline-block;
   position: relative;
   z-index: 10;
   bottom: 0;
-}
-
-.about-title{
   &:after{
     content: "";
     display: block;
     width: 90px;
     height: 3px;
     left:40%;
-    background: $title_color;
     @include centered(x);
+  }
+}
+
+.about-title{
+  font-size: 63px;
+  font-family: $sansus;
+  color: $title_color;
+  &:after{
+    background: $title_color;
+  }
+}
+
+
+
+.about-section_title{
+  font-size: 35px;
+  color: #59655b;
+  font-family: $sansus;
+  &:after{
+    background: #59655b;
+  }
+  @include tablet{
+    text-align: center;
   }
 }
 .about_svg{

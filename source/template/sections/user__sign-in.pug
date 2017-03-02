@@ -1,0 +1,29 @@
+.back-window
+    .back-window_title Authorization
+
+    form.back-window__form
+        .form-block__login
+            .form-block__login-svg
+                svg.login_svg
+                    use(xlink:href='./assets/img/sprite.svg#login')
+            input(type="text" name="login" placeholder="Login").back-window__form-input.login-input
+        .form-block__password
+            .form-block__login-svg
+                svg.password_svg
+                    use(xlink:href='./assets/img/sprite.svg#password')
+            input(type="password" name="password" placeholder="Password").back-window__form-input.passsword-inpu
+
+        input(type="checkbox" name="robot" id="robot").back-window__form-input_checkbox
+        label(for="robot").back-window__form-label I am not a robot
+
+        .back-window__form-question Are you sure, your aren't a robot?
+
+        input(type="radio" id="question_yes" name="question").back-window__form-input_radio
+        label(for="question_yes").back-window__form-label.back-window__form-label-yes Yes
+
+        input(type="radio" id="question_no" name="question").back-window__form-input_radio
+        label(for="question_no").back-window__form-label No
+
+        .back-window__form-buttonts
+            input(type="submit" value="Sign In").welcome-form_button-sign-in
+            input(type="button" value="Main page").welcome-form_button-main-page

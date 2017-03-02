@@ -1,0 +1,146 @@
+.back-window{
+  height: 100%;
+  width: 100%;
+
+}
+.back-window_title{
+  font-size: 35px;
+  color: $text_color;
+  @include centered(x);
+  font-family: $robo-med;
+  padding: 30px 80px;
+  display: inline-block;
+  position: relative;
+  z-index: 10;
+  bottom: 0;
+  &:after{
+    content: "";
+    display: block;
+    width: 90px;
+    height: 3px;
+    left:40%;
+    background: $text_color;
+    @include centered(x);
+  }
+}
+.form-block__login, .form-block__password{
+  position: relative;
+}
+.form-block__password{
+  margin-bottom: 20px;
+}
+.back-window__form-input{
+  width: 296px;
+  height: 45px;
+  font-size: 16px;
+  padding-left: 27px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  border: none;
+}
+
+.login_svg, .password_svg{
+  fill: #c4cbcd;
+  width: 20px;
+  height: 20px;
+  @include centered(both);
+}
+.form-block__login-svg{
+  background: #f0efe9;
+  width: 46px;
+  height: 47px;
+  position: absolute;
+  top: 0;
+  left: 3%;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+}
+.back-window__form-label{
+  color: $text_color;
+}
+.back-window__form-question{
+  color: $text_color;
+  font-family: $robo_bold;
+  font-size: 16px;
+  margin-top:20px;
+  margin-bottom: 20px;
+}
+.back-window__form-label{
+  font-size: 16px;
+}
+.back-window__form-label-yes{
+  margin-right: 40px;
+}
+.back-window__form-label-yes{
+  margin-bottom: 30px;
+}
+// input radio/ checkbox
+input[type=radio], input[type=checkbox] {
+  display:none;
+}
+input[type=radio] + label:before {
+  content: "";
+  display: inline-block;
+  font-family: $robo_reg;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 8px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+}
+input[type=checkbox] + label:before {
+  content: "";
+  display: inline-block;
+  font-family: $robo_reg;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 8px;
+  background-color: rgb(255, 255, 255);
+}
+
+input[type=radio]:checked + label:before {
+  content: "\2022"; /* Bullet */
+  color:#6c9c5a;
+  background-color: $text_color;
+  font-size: 46px;
+  text-align: center;
+  line-height:23px;
+}
+input[type=checkbox]:checked + label:before {
+  content:"\02713"; /* Tick */
+  color:  #fff;
+  background-color: #6c9c5a;
+  text-align: center;
+  font-size: 23px;
+  line-height: 21px;
+}
+//buttons
+
+.welcome-form_button-sign-in, .welcome-form_button-main-page{
+  background: #629055;
+  border: none;
+  font-family:$robo_med;
+  font-size: 16px;
+  color: $text_color;
+  padding: 15px 63px;
+  margin-left: 0;
+  &:hover{
+    background: #477e39;
+  }
+}
+.welcome-form_button-sign-in{
+  border-right: 1px solid #9fb99e;
+  margin-right: -2px;
+  border-bottom-left-radius: 5px;
+}
+.welcome-form_button-main-page{
+  border-left: 1px solid #9fb99e;
+  margin-left: -2px;
+  border-bottom-right-radius: 5px;
+}
+.back-window__form-buttonts{
+  margin-top: 20px;
+}

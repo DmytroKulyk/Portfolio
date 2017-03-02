@@ -4,39 +4,27 @@ block title
     title about
 
 block content
+    include ./../sections/overlay_navigation
     .wrapper
+
         section.section.hero
 
-
-            .hero__bg
-
-            .hero_container
-                svg.about-text-svg
-                    use(xlink:href='./assets/img/sprite.svg#portfolio_header')
-
-            .user-about
-                include ./../sections/user.pug
-
-            ul.socials-about
-                include ./../sections/social_icons.pug
-
-            include ./../sections/hamburger.pug
+            include ./../sections/hero_section
 
         section.section.about
             .about__col.about__col_left
                 svg(viewBox="0 0 1000 110" preserveAspectRatio="none").about__triangle
                    polygon(points="0,0 0,110 1000,110")
 
-                .section-title.about-title About me
-                    svg.about_svg
+                .section-title-about About me
+                    svg.about-icon_svg
                         use(xlink:href='./assets/img/sprite.svg#about_header')
 
-                .about
+                .about-user-block
                     .about__pic
                         img(src="assets/img/heroImg.png" alt="owner img").about__pic-img
 
-                    .block-title
-                        .section-title.about-title  Who am I?
+                    .section-title.about-section_title  Who am I?
 
                     .block-text
                         p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!
@@ -46,8 +34,9 @@ block content
                         svg(viewBox="0 0 1000 110" preserveAspectRatio="none").about__triangle
                             polygon(points="0,110 1000,110 1000,0")
                         .skills
-                            .block-title
-                                .section-title.about-title   How can I help you
+
+                            .section-title.about-section_title   How can I help you
+
                             .skills__text
                                 p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!
 
@@ -117,25 +106,26 @@ block content
 
         section.section.map
             .contact-window
-                .block-title
-                    .section-title Contacts
-                    ul.contacts-list
-                        li.contacts-list_item
-                            svg.contact_svg
-                                use(xlink:href='./assets/img/sprite.svg#skype')
-                            .skype_title.item-title fanat875
-                        li.contacts-list_item
-                            svg.contact_svg
-                                use(xlink:href='./assets/img/sprite.svg#envelope2')
-                            .email_text.item-title dmytrokulyk@yahoo.com
-                        li.contacts-list_item
-                            svg.contact_svg
-                                use(xlink:href='./assets/img/sprite.svg#phone')
-                            .phone.item-title  +1 261 289 4698
-                        li.contacts-list_item
-                            svg.contact_svg
-                                use(xlink:href='./assets/img/sprite.svg#map_marker')
-                            .adress.item-title 266 Mission str San Francisco CA
+
+                .section-title.about-section_title Contacts
+
+                ul.contacts-list
+                    li.contacts-list_item
+                        svg.contact_svg
+                            use(xlink:href='./assets/img/sprite.svg#skype')
+                        .skype_title.item-title fanat875
+                    li.contacts-list_item
+                        svg.contact_svg
+                            use(xlink:href='./assets/img/sprite.svg#envelope2')
+                        .email_text.item-title dmytrokulyk@yahoo.com
+                    li.contacts-list_item
+                        svg.contact_svg
+                            use(xlink:href='./assets/img/sprite.svg#phone')
+                        .phone.item-title  +1 261 289 4698
+                    li.contacts-list_item
+                        svg.contact_svg
+                            use(xlink:href='./assets/img/sprite.svg#map_marker')
+                        .adress.item-title 266 Mission str San Francisco CA
             .footer
                 include ./../sections/footer.pug
 

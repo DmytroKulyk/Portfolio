@@ -8,22 +8,23 @@ block content
         .maincontent
             section.section.welcome-page
                 .sign-in-button Sign in
+
                 .l-main-window
 
                     .l-page-autorization
+                        .user-welcome-form.user-welcome-form__front
+                            include ./../sections/user.pug
+                            ul.menu-links
+                                li.munu-links__item
+                                    a(href="project.html").menu-link_my-projects My projects
+                                li.munu-links__item
+                                    a(href="about.html").menu-link_about About Me
+                                li.munu-links__item
+                                    a(href="blog.html").menu-link_blog Blog
 
-                    .user-welcome
-                        include ./../sections/user.pug
+                            ul.socials-welcome
+                                include ./../sections/social_icons.pug
 
+                        .user-welcome-form.user-welcome-form__back
+                             include ./../sections/user__sign-in.pug
 
-
-                    ul.menu-links
-                        li.munu-links__item
-                            a.menu-link_my-projects My projects
-                        li.munu-links__item
-                            a.menu-link_about(href="about.html") About Me
-                        li.munu-links__item
-                            a.menu-link_blog Blog
-
-                    ul.socials-welcome
-                        include ./../sections/social_icons.pug

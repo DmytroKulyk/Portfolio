@@ -1,0 +1,12 @@
+.hero__bg
+    img(src="assets/img/bg_welcome.png")
+.hero__container
+    svg.about-text-svg
+        use(xlink:href='./assets/img/sprite.svg#portfolio_header')
+    .hero__user
+        include ./../sections/user.pug
+
+ul.socials-about
+    include ./../sections/social_icons.pug
+
+include ./../sections/hamburger.pug

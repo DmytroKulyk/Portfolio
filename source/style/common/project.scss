@@ -1,13 +1,13 @@
 .projects{
-  height: 700px;
+  height: 100vh;
+  min-height: 600px;
   overflow: hidden;
   position: relative;
   width: 100%;
-  @extend %clearfix;
 }
 
 .project-block{
-  margin-bottom: 200px;
+  margin-bottom: 70px;
 }
 .hero_container{
   @extend %clearfix;
@@ -61,33 +61,70 @@
   width: 400px;
   top: 40%;
 }
-
-// projects left
 .project-block{
   @extend %clearfix;
+  background: #ebefe2;
+  position: relative;
 }
+
+.project-list_item{
+  height: 760px;
+}
+.portf_arrow{
+  fill: #92b583;
+  height: 25px;
+  position: absolute;
+  top: 50%;
+  z-index: 1000;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.portf_arrow_left_svg{
+  transform: rotate(90deg);
+  left: -115px;
+  &:hover{
+  left: -108px;
+}
+}
+.portf_arrow_right_svg{
+  transform: rotate(-90deg);
+  right: -115px;;
+  &:hover{
+    right: -108px;
+  }
+}
+// projects right
 .project__col{
   float: left;
-  width: 50%;
-}
-.project-list_item-information{
+
   height: 760px;
-  background: #ebefe2;
+}
+.project__col_right, .project__col_left{
   overflow: hidden;
   text-align: center;
+  position: relative;
+}
+.project__col_right{
+  width: 40%;
+}
+.project__col_left{
+  width: 60%;
+}
+
+.project-list_item-information{
+  @include centered(both);
 }
 
 .project-list_item-title{
-  font-size: 63px;
+  font-size: 35px;
   color: $title_color;
   @include centered(x);
   font-family: $robo_bold;
-  padding: 30px 80px;
   display: inline-block;
   position: relative;
+  margin-bottom: 20px;
   z-index: 10;
-  bottom: 0;
-  margin-top: 30%;
   &:after {
     content: "";
     display: block;
@@ -129,18 +166,192 @@
   margin-left: 10px;
 }
 
-// project right
+// project left
 
-.project__col_right{
-  background: #e1e4d7;
-  height: 760px;
-}
 
-.projects-img-carusel__item-link{
-  height: 540px;
+.projects-img-carusel{
+  height: 500px;
   width: 100%;
-  margin-top: 60px;
+  position: absolute;
+  margin: 30px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
 }
+
 .projects-img-carusel__item-img{
-  max-width: 100%;
+  width: 100%;
+  height: 100%;
 }
+
+// what's about me block
+
+.whats-about{
+  //background: url('../img/projects_bg.png')  center center;
+  width: 100%;
+  height: 1300px;
+  background-size: cover;
+  position: relative;
+  min-width: 946px;
+}
+
+.whats-about__title{
+  font-size: 63px;
+  color: #373e42;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: $robo-bold;
+  padding: 30px 80px;
+  position: absolute;
+  z-index: 10;
+  top: 1%;
+}
+
+
+.whats-about__title_text{
+  &:after{
+    content: "";
+    display: block;
+    width: 90px;
+    height: 3px;
+    left:40%;
+    background: #373e42;
+    @include centered(x);
+  }
+}
+
+.review{
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 770px;
+
+}
+.review-item{
+  width: 380px;
+  display: inline-block;
+  text-align: center;
+  max-height: 130px;
+  vertical-align: top;
+  line-height: 2;
+}
+.mentor-photo{
+  margin-bottom: 20px;
+}
+.mentor-review{
+  font-size: 16px;
+  font-family: $robo_ital;
+  color: #5d5a55;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.quotes_svg{
+  opacity: .6;
+  fill: #e2ebd0;
+  position: absolute;
+  top: 70%;
+  height: 60px;
+  width: 60px;
+  z-index: -1;
+}
+
+.quotes_svg-left{
+  right: 330px;
+}
+.quotes_svg-right{
+  left: 0;
+}
+.mentor-name{
+  color: #598f45;
+  font-size: 16px;
+  font-family: 'robotobold_italic';
+}
+
+.mentor-pozition{
+  font-size: 16px;
+  font-family: $robo_ital;
+  color: #5d5a55;
+}
+
+//contact with me
+
+
+
+.contact-with-me__title{
+  font-size: 35px;
+  color: #373e42;
+  left: 20%;
+  font-family: $robo-reg;
+  position: absolute;
+  z-index: 10;
+  top: 5%;
+}
+
+
+.contact-with-me__title_text{
+  &:after{
+    content: "";
+    display: block;
+    width: 90px;
+    height: 3px;
+    left:40%;
+    background: #373e42;
+    @include centered(x);
+  }
+}
+.contact-me__form{
+  @include centered(both);
+}
+.contact-me__form-input{
+  background-color: white;
+  width: 340px;
+  height: 45px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  text-indent: 10px;
+  border: 0;
+}
+.contact-me__form-input_textarea{
+  background-color: rgb(255, 255, 255);
+  width: 325px;
+  height: 140px;
+  border-radius: 20px;
+  padding: 10px;
+  font-size: 16px;
+  border: 0;
+  resize: vertical;
+  max-height: 180px;
+}
+
+.contact-me__form-button{
+  position: absolute;
+  padding: 15px 78px;
+  background: rgb(108, 156, 90);
+  border: none;
+  cursor: pointer;
+  bottom: -91px;
+  font-size: 16px;
+  font-family: $robo_med;
+  color: $text_color;
+  &:hover{
+    background: rgb(78, 136, 57);
+  }
+}
+
+
+.contact-me__form-button-send{
+  left: -18px;
+  border-right: 1px solid white;
+  border-bottom-left-radius: 5px;
+}
+.contact-me__form-button-reset{
+  right: -18px;
+  border-left: 1px solid white;
+  border-bottom-right-radius: 5px;
+}
+

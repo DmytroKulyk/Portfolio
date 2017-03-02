@@ -1,12 +1,62 @@
 .about{
   @extend %clearfix;
+  position: relative;
 }
-
+.about-user-block{
+  float: left;
+  width: 50%;
+  @include laptop{
+    float: none;
+    width: 100%;
+  }
+}
+.section-title-about{
+  float: left;
+  width: 50%;
+  left: 0;
+  font-size: 63px;
+  font-family: $sansus;
+  color: $title_color;
+  padding: 30px 0;
+  display: inline-block;
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  @include laptop{
+    float: none;
+    text-align: center;
+    left: 25%;
+  }
+  &:after{
+    content: "";
+    display: block;
+    width: 90px;
+    height: 3px;
+    background: $title_color;
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+  }
+}
+.about-icon_svg{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  fill: #e2ebd0;
+  width: 85%;
+}
 .about__col {
   float: left;
   width: 50%;
-  position: relative;
-  height: 860px;
+ // position: relative;
+  min-height: 880px;
+  @include tablet{
+    float: none;
+    width: 95%;
+    padding-bottom: 10px;
+  }
 
   &_left{
     background: $light-green;
@@ -14,6 +64,8 @@
     .about__triangle{
       left: 0;
       fill: $light-green;
+      width: 50%;
+
     }
   }
   &_right{
@@ -22,6 +74,10 @@
     .about__triangle{
       right: 0;
       fill: $dark-white;
+      width: 50%;
+      @include tablet{
+        fill: $light-green;
+      }
     }
 
   }
@@ -36,11 +92,15 @@
   bottom: 100%;
 }
 
+
 .about__pic{
-  margin: 0 auto 20px auto;
+  margin: 40px auto 20px auto;
   height: 390px;
   width: 440px;
   overflow: hidden;
+  @include laptop{
+    margin-top: 0;
+  }
 }
 
 .block-title .section-title{
@@ -54,6 +114,10 @@
   color: $dark_green;
   width: 440px;
   margin: 0 auto;
+  @include phone{
+    margin: 0 30px 40px 30px;
+    width: 90%;
+  }
 }
 
 .skills__text{
@@ -63,6 +127,9 @@
 }
 .skills-group{
   margin: 20px 30px;
+  @include tablet{
+    text-align: center;
+  }
 }
 
 

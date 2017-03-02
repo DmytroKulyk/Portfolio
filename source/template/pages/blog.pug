@@ -4,24 +4,11 @@ block title
     title Blog
 
 block content
+    include ./../sections/overlay_navigation
     .wrapper
         section.section.hero
 
-            .hero__bg
-
-            .hero_container
-
-            .user-about
-                .user__pic-container
-                    .user__pic
-                    .section-title
-                        .blog-title Blog
-                    .user__desc Articles that I wrote
-
-            ul.socials-about
-                include ./../sections/social_icons.pug
-
-            include ./../sections/hamburger.pug
+            include ./../sections/hero_section
 
             .blog-triangle-container.blog-triagle__left
                 svg(viewBox="0 0 1000 110" preserveAspectRatio="none").blog__triangle

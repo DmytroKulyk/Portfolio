@@ -1,20 +1,40 @@
-.footer{
-  background-color: rgb(55, 62, 66);
-  opacity: 0.8;
-  height: 190px;
+.footer {
+  background-color: rgba(55, 62, 66, .8);
+  min-height: 190px;
   width: 100%;
   position: absolute;
   bottom: 0;
+  display: flex;
+  justify-content: center;
+  @include tablet{
+    flex-wrap: wrap;
+  }
 }
 
 .footer-col{
-  float: left;
   width: 30%;
+  min-width: 260px;
   margin-top: 20px;
-  padding-left: 30px;
   line-height: 1.9;
-}
+  @include laptop {
+    min-width: 230px;
+  }
+  @include phone {
+    padding-left: 0;
+      }
+  @include tablet{
+     min-width: 200px;
+  }
+  }
 
+
+.footer__loft-info{
+  @include phone{
+    width: 95%;
+    text-align: center;
+
+  }
+}
 .loft-info_text{
   font-size: 16px;
   font-family: $robo_light;
@@ -22,14 +42,43 @@
 }
 
 .footer__navigation{
+  height: 100px;
+  padding-right: 20px;
+  padding-left: 20px;
+  @include tablet{
+    width: 45%;
+    border-right: none;
+  }
+  @include phone{
+    width: 80%;
+    text-align: center;
+
+    border-left: none;
+    border-top: 1px solid darkgray;
+    border-bottom: 1px solid darkgray;
+  }
   border-right: 1px solid darkgray;
   border-left: 1px solid darkgray;
 }
 
+.footer__navigation_items{
+ display: flex;
+  justify-content: space-around;
+}
 .footer__navigation_item{
+  flex: 0 0 auto;
   display: inline-block;
   &:not(:first-child) {
-    margin-left: 25px;
+    margin-left: 10px;
+    @include tablet{
+      margin-right: 5px;
+    }
+  }
+  &:last-child{
+    margin-right: 10px;
+    @include tablet{
+      margin-right: 5px;
+    }
   }
 }
 .footer__navigation_item-link{
@@ -38,7 +87,18 @@
   color: $text_color;
 
 }
-
+.footer__quote{
+  margin-left: 20px;
+  @include tablet{
+    width: 95%;
+    margin-bottom: 40px;
+  }
+  @include phone{
+    text-align: center;
+    opacity: .7;
+    margin-bottom: 0;
+  }
+}
 .footer__quote-text{
   font-size: 16px;
   font-family: $robo_ital;
@@ -47,6 +107,7 @@
 .footer__quote-text_author{
   font-size: 16px;
   font-family: $robo_bold;
+  margin-bottom: 40px;
 }
 
 
@@ -57,16 +118,20 @@
   bottom: 0;
   background-color: rgb(108, 156, 90);
   opacity: 0.9;
-  height: 40px;
+  min-height: 40px;
   width: 100%;
   text-align: center;
 }
 
 .bottom-line_text{
+
   @include centered(both);
   font-size: 16px;
   font-family: $robo_light;
   color: $text_color;
+  @include phone{
+    min-width: 330px;
+  }
 }
 
 .socials-about-footer .socials__icon{
