@@ -6,9 +6,6 @@
   width: 100%;
 }
 
-.project-block{
-  margin-bottom: 70px;
-}
 .hero_container{
   @extend %clearfix;
 }
@@ -61,62 +58,55 @@
   width: 400px;
   top: 40%;
 }
-.project-block{
+
+// projects slider
+
+.slider{
   @extend %clearfix;
-  background: #ebefe2;
   position: relative;
-}
-
-.project-list_item{
-  height: 760px;
-}
-.portf_arrow{
-  fill: #92b583;
-  height: 25px;
-  position: absolute;
-  top: 50%;
-  z-index: 1000;
-  cursor: pointer;
-  transition: .3s;
-}
-
-.portf_arrow_left_svg{
-  transform: rotate(90deg);
-  left: -115px;
-  &:hover{
-  left: -108px;
-}
-}
-.portf_arrow_right_svg{
-  transform: rotate(-90deg);
-  right: -115px;;
-  &:hover{
-    right: -108px;
+  margin-bottom: 70px;
+  height: 100vh;
+  min-height: 750px;
+  @include tablet {
+    height: auto;
+    min-height: 0;
+    text-align: center;
   }
 }
-// projects right
-.project__col{
+
+.slider__col{
   float: left;
-
-  height: 760px;
-}
-.project__col_right, .project__col_left{
-  overflow: hidden;
-  text-align: center;
+  height: 100%;
+  min-height: 700px;
   position: relative;
-}
-.project__col_right{
-  width: 40%;
-}
-.project__col_left{
-  width: 60%;
+  width: 50%;
+  text-align: center;
+  @include tablet {
+    float: none;
+    width: 100%;
+    height: auto;
+  }
 }
 
-.project-list_item-information{
+.slider__col_right{
+  background: #ebefe2;
+}
+.slider__col_left{
+  background: #e1e4d7;
+}
+
+// col left
+
+.slider__desc{
   @include centered(both);
+ @include tablet {
+   position: static;
+   transform: none;
+   display: inline-block;
+ }
 }
 
-.project-list_item-title{
+.slider__desc-title{
   font-size: 35px;
   color: $title_color;
   @include centered(x);
@@ -136,13 +126,13 @@
   }
 }
 
-.project-list_item-components{
+.slider__desc-skills{
   font-size: 16px;
   font-family: $robo_med;
   color: #4e8839;
   margin-bottom: 60px;
 }
-.project-link_svg{
+.slider__desc-btn_svg{
   fill: $text_color;
   height: 20px;
   width: 20px;
@@ -150,7 +140,7 @@
   margin-left: 0;
 }
 
-.project-list_item-button{
+.slider__desc-btn{
   width: 200px;
   padding: 16px 20px;
   border: 1px solid #6c9c5a;
@@ -166,25 +156,92 @@
   margin-left: 10px;
 }
 
-// project left
+// col right
 
-
-.projects-img-carusel{
-  height: 500px;
+.slider__display{
+  height: 70%;
   width: 100%;
+  position: relative;
+  left: 100%;
+  z-index: 10;
+  @include tablet {
+    position: static;
+
+  }
+}
+.slider__display-pic{
+  width: 600px;
+  @include centered('both');
+  @include laptop {
+    width: 450px;
+  }
+  @include tablet {
+    width: 560px;
+    position: static;
+    transform: none;
+    display: inline-block;
+  }
+  @include phone {
+    width: 230px;
+  }
+}
+.slider__btns{
+  height: 30%;
+  @extend %clearfix;
+  position: relative;
+  top: 70%;
+  @include tablet {
+    position: static;
+    height: 200px;
+  }
+}
+.slider__btn{
+  width: 50%;
   position: absolute;
-  margin: 30px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  cursor: pointer;
-}
-
-.projects-img-carusel__item-img{
-  width: 100%;
   height: 100%;
+  @include tablet {
+    height: 200px;
+  }
+}
+.slider__btn_left{
+  background: linear-gradient( rgba(176, 183, 170, .7),
+          rgba(176, 183, 170, .7)),
+  url('../img/loft3.png');
+  background-position: center;
+  left: 0;
+}
+.slider__btn_right{
+  background: linear-gradient( rgba(176, 183, 170, .7),
+                              rgba(176, 183, 170, .7)),
+url('../img/loft3.1.png');
+  background-position: center;
+  background-size: cover;
+  right: 0;
 }
 
+.portf_arrow{
+  fill: $text_color;
+  height:35px;
+  width: 40px;
+  position: absolute;
+  top: 100px;
+  z-index: 1000;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.portf_arrow_down_svg{
+  left: 25%;
+  &:hover{
+    top: 95px;
+  }
+}
+.portf_arrow_up_svg{
+  right: 25%;
+  &:hover{
+    top: 90px;
+  }
+}
 // what's about me block
 
 .whats-about{

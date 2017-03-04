@@ -15,10 +15,11 @@ $('.welcome-form_button-main-page').on('click', function () {
     $('.l-page-autorization').toggleClass('flipped');
 });
 
+// carusel
 
 $(function(){
 
-    var burgerCarusel = $(".owl-carousel").owlCarousel({
+    var projCarusel = $(".owl-carousel").owlCarousel({
         items : 1,
         loop : true,
         dotsEach : true
@@ -26,11 +27,11 @@ $(function(){
 
     $('.portf_arrow_left_svg').on('click', function(e){
         e.preventDefault();
-        burgerCarusel.trigger('prev.owl.carousel', [300]);
+        projCarusel.trigger('prev.owl.carousel', [300]);
     });
     $('.portf_arrow_right_svg').on('click', function(e){
         e.preventDefault();
-        burgerCarusel.trigger('next.owl.carousel', [300]);
+        projCarusel.trigger('next.owl.carousel', [300]);
     });
 });
 
@@ -62,23 +63,23 @@ var paralax = (function () {
 
 // blur
 
-var blur = function () {
+var blur = (function () {
     var wrapper = document.querySelector('.contact-with-me');
     var form = document.querySelector('.blur__form');
 
     return {
         set: function () {
             var imgWidth = document.querySelector(".blur__background").offsetWidth;
-            var postLeft = -wrapper.offsetLeft + 273;
-            var posTop = -wrapper.offsetTop + 588;
-            var blurCSS = form.style;
+            var postLeft = -wrapper.offsetLeft;
+            var posTop = -wrapper.offsetTop + 800;
+            var blurCSS = form.style ;
 
-            blurCSS.backgroundSize = imgWidth + 'px' + ' ' + 'auto';
-            blurCSS.backgroundPositionX = postLeft + 'px';
-            blurCSS.backgroundPositionY = posTop + 'px';
+                blurCSS.backgroundSize = imgWidth + 'px' + ' ' + 'auto';
+                blurCSS.backgroundPosition = postLeft + 'px'+ ' ' + posTop + 'px';
+
+            }
         }
-}
-}();
+    }());
 
 blur.set();
 
@@ -90,7 +91,7 @@ blur.set();
 
  window.onresize = function() {
      blur.set();
- }
+ };
 
 // overlay nav
 
@@ -106,5 +107,4 @@ $('.overlay__closebtn').on('click', function(e){
 
 
 
-    })();
-
+    });
