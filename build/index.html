@@ -11,16 +11,17 @@
     <link rel="stylesheet" href="/assets/css/foundation.css">
     <link rel="stylesheet" href="/assets/css/app.css">
     <script src="/assets/js/foundation.js" defer></script>
-    <script src="/assets/js/app.js" defer></script><!--[if lt IE 9]>
+    <script src="/assets/js/app.js" defer></script>
+    <script src="/assets/js/water.js" defer></script><!--[if lt IE 9]>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
   </head>
   <body>
     <div class="wrapper">
-      <div class="forest_paralax">
-        <div class="forest_paralax__photo"><img class="forest_paralax__photo_img" src="/assets/img/fav_forest.png"></div>
-      </div>
       <div class="maincontent">
         <section class="section welcome-page">
+          <div class="Background">
+            <div class="Background-canvas"></div>
+          </div>
           <div class="sign-in-button">Sign in</div>
           <div class="l-main-window">
             <div class="l-page-autorization">
@@ -53,7 +54,7 @@
               <div class="user-welcome-form user-welcome-form__back">
                 <div class="back-window">
                   <div class="back-window_title">Authorization</div>
-                  <form class="back-window__form">
+                  <form class="back-window__form" name="form" action="#" method="get">
                     <div class="form-block__login">
                       <div class="form-block__login-svg">
                         <svg class="login_svg">
@@ -61,6 +62,10 @@
                         </svg>
                       </div>
                       <input class="back-window__form-input login-input" type="text" name="login" placeholder="Login">
+                      <div class="dropdown_error dropdown_error-login">
+                        <div class="triangle_error"></div>
+                        <div class="dropdown_error-login-text">text is not valid</div>
+                      </div>
                     </div>
                     <div class="form-block__password">
                       <div class="form-block__login-svg">
@@ -68,14 +73,18 @@
                           <use xlink:href="./assets/img/sprite.svg#password"></use>
                         </svg>
                       </div>
-                      <input class="back-window__form-input passsword-inpu" type="password" name="password" placeholder="Password">
+                      <input class="back-window__form-input password-input" type="password" name="password" placeholder="Password">
+                      <div class="dropdown_error dropdown_error-password">
+                        <div class="triangle_error"></div>
+                        <div class="dropdown_error-pass-text">text is not valid</div>
+                      </div>
                     </div>
                     <input class="back-window__form-input_checkbox" type="checkbox" name="robot" id="robot">
-                    <label class="back-window__form-label" for="robot">I am not a robot</label>
+                    <label class="back-window__form-label back-window__form-label-checkbox" for="robot">I am not a robot</label>
                     <div class="back-window__form-question">Are you sure, your aren't a robot?</div>
-                    <input class="back-window__form-input_radio" type="radio" id="question_yes" name="question">
+                    <input class="back-window__form-input_radio" type="radio" id="question_yes" name="question" value="yes">
                     <label class="back-window__form-label back-window__form-label-yes" for="question_yes">Yes</label>
-                    <input class="back-window__form-input_radio" type="radio" id="question_no" name="question">
+                    <input class="back-window__form-input_radio" type="radio" id="question_no" name="question" value="no">
                     <label class="back-window__form-label" for="question_no">No</label>
                     <div class="back-window__form-buttonts">
                       <input class="welcome-form_button-sign-in" type="submit" value="Sign In">
@@ -87,6 +96,24 @@
             </div>
           </div>
         </section>
+      </div>
+    </div>
+    <div class="preloader">
+      <div class="preloader__spiner">
+        <div class="preloader__animation">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="80px" height="95.113px" viewbox="0 0 80 95.113" enable-background="new 0 0 80 95.113" xml:space="preserve">
+            <g>
+              <path class="forest_path forest_path_1" fill="none" stroke="#ffffff" stroke-width="3.9003" stroke-miterlimit="10" d="M0 38.005c6.663 0 6.663 7.801 13.327 7.801 6.665 0 6.665-7.801 13.33-7.801 6.667 0 6.667 7.801 13.334 7.801 6.666 0 6.666-7.801 13.331-7.801 6.67 0 6.67 7.801 13.339 7.801S73.33 38.005 80 38.005"></path>
+            </g>
+            <g>
+              <path class="forest_path forest_path_2" fill="none" stroke="#ffffff" stroke-width="3.9003" stroke-miterlimit="10" d="M0 61.684c6.663 0 6.663 7.801 13.327 7.801 6.665 0 6.665-7.801 13.33-7.801 6.667 0 6.667 7.801 13.334 7.801 6.666 0 6.666-7.801 13.331-7.801 6.67 0 6.67 7.801 13.339 7.801S73.33 61.684 80 61.684"></path>
+            </g>
+            <g>
+              <path class="forest_path forest_path_3" fill="none" stroke="#ffffff" stroke-width="3.9003" stroke-miterlimit="10" d="M0 85.362c6.663 0 6.663 7.801 13.327 7.801 6.665 0 6.665-7.801 13.33-7.801 6.667 0 6.667 7.801 13.334 7.801 6.666 0 6.666-7.801 13.331-7.801 6.67 0 6.67 7.801 13.339 7.801S73.33 85.362 80 85.362"></path>
+            </g>
+            <text class="forest_num" transform="matrix(1 0 0 1 19.9785 20.5957)" font-family="'ArialMT'" font-size="24">0%</text>
+          </svg>
+        </div>
       </div>
     </div>
   </body>

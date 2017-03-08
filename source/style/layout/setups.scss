@@ -16,9 +16,13 @@ html{
 body {
   height: 100%;
   margin: 0;
-  font-family: 'Roboto', Arial, sens-serife;
+  font-family: 'Roboto', 'Arial', 'sens-serife';
   line-height: 1.42;
   -webkit-font-smoothing: antialiased;
+}
+
+textarea:focus, input:focus{
+  outline: none;
 }
 
 .wrapper{

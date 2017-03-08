@@ -32,7 +32,8 @@
   left: 50%;
   transform: translateX(-50%);
   font-family: $robo-bold;
-  padding: 30px 80px;
+  //padding: 30px 80px;
+  min-width: 340px;
   position: absolute;
   z-index: 10;
   top: 80%;
@@ -85,6 +86,7 @@
     float: none;
     width: 100%;
     height: auto;
+    min-height: 200px;
   }
 }
 
@@ -103,6 +105,10 @@
    position: static;
    transform: none;
    display: inline-block;
+   padding-top: 100px;
+   padding-bottom: 50px;
+   background-color: #ebefe2;
+   width: 100%;
  }
 }
 
@@ -115,6 +121,11 @@
   position: relative;
   margin-bottom: 20px;
   z-index: 10;
+  @include tablet {
+    position: static;
+    left: 0;
+    transform: none;
+  }
   &:after {
     content: "";
     display: block;
@@ -180,6 +191,8 @@
     position: static;
     transform: none;
     display: inline-block;
+    margin-top: 100px;
+    margin-bottom: 40px;
   }
   @include phone {
     width: 230px;
@@ -250,7 +263,7 @@ url('../img/loft3.1.png');
   height: 1300px;
   background-size: cover;
   position: relative;
-  min-width: 946px;
+  //min-width: 946px;
 }
 
 .whats-about__title{
@@ -260,7 +273,8 @@ url('../img/loft3.1.png');
   left: 50%;
   transform: translateX(-50%);
   font-family: $robo-bold;
-  padding: 30px 80px;
+  //padding: 30px 80px;
+  min-width: 260px;
   position: absolute;
   z-index: 10;
   top: 1%;
@@ -285,15 +299,20 @@ url('../img/loft3.1.png');
   left: 50%;
   transform: translateX(-50%);
   width: 770px;
-
+  @include tablet{
+    width: 700px;
+  }
 }
 .review-item{
-  width: 380px;
-  display: inline-block;
+ float: left;
+  width: 50%;
   text-align: center;
-  max-height: 130px;
   vertical-align: top;
   line-height: 2;
+  @include tablet{
+    width: 350px;
+  }
+
 }
 .mentor-photo{
   margin-bottom: 20px;
@@ -372,6 +391,7 @@ url('../img/loft3.1.png');
   font-size: 16px;
   text-indent: 10px;
   border: 0;
+  box-sizing: border-box;
 }
 .contact-me__form-input_textarea{
   background-color: rgb(255, 255, 255);
@@ -382,7 +402,7 @@ url('../img/loft3.1.png');
   font-size: 16px;
   border: 0;
   resize: vertical;
-  max-height: 180px;
+  max-height: 170px;
 }
 
 .contact-me__form-button{
@@ -412,3 +432,20 @@ url('../img/loft3.1.png');
   border-bottom-right-radius: 5px;
 }
 
+.error_message-name{
+  position: absolute;
+  color: #e34844;
+  top: -20px;
+  left: 7px;
+}
+.error_message-mail{
+  position: absolute;
+  color: #e34844;
+  top: 44px;
+  left: 0;
+}
+.error_message-textarea{
+  position: absolute;
+  color: #e34844;
+  top: 37%;
+}

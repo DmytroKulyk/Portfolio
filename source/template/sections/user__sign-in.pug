@@ -1,27 +1,29 @@
 .back-window
     .back-window_title Authorization
 
-    form.back-window__form
+    form(name="form" action="#" method="get").back-window__form
         .form-block__login
             .form-block__login-svg
                 svg.login_svg
                     use(xlink:href='./assets/img/sprite.svg#login')
             input(type="text" name="login" placeholder="Login").back-window__form-input.login-input
+            include ./../sections/autorization_login
         .form-block__password
             .form-block__login-svg
                 svg.password_svg
                     use(xlink:href='./assets/img/sprite.svg#password')
-            input(type="password" name="password" placeholder="Password").back-window__form-input.passsword-inpu
+            input(type="password" name="password" placeholder="Password").back-window__form-input.password-input
+            include ./../sections/autorization_password
 
         input(type="checkbox" name="robot" id="robot").back-window__form-input_checkbox
-        label(for="robot").back-window__form-label I am not a robot
+        label(for="robot").back-window__form-label.back-window__form-label-checkbox I am not a robot
 
         .back-window__form-question Are you sure, your aren't a robot?
 
-        input(type="radio" id="question_yes" name="question").back-window__form-input_radio
+        input(type="radio" id="question_yes" name="question" value="yes").back-window__form-input_radio
         label(for="question_yes").back-window__form-label.back-window__form-label-yes Yes
 
-        input(type="radio" id="question_no" name="question").back-window__form-input_radio
+        input(type="radio" id="question_no" name="question" value="no").back-window__form-input_radio
         label(for="question_no").back-window__form-label No
 
         .back-window__form-buttonts

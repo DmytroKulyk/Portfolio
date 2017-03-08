@@ -1,0 +1,46 @@
+.preloader{
+  position: fixed;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  background: url('../img/forest_prel_bg.jpg');
+}
+
+.preloader__spiner{
+  @include centered('both');
+}
+
+
+.forest_path {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 500;
+  animation: dash linear 3s infinite forwards;
+}
+
+//.forest_path_1{
+//  animation-delay: 0s;
+//}
+//.forest_path_2{
+//  animation-delay: 1s;
+//}
+//.forest_path_3{
+//  animation-delay: 2s;
+//}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 100;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -100;
+  }
+}
+.forest_num{
+  fill: #fff;
+}
+

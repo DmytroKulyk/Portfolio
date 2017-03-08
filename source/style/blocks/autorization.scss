@@ -1,0 +1,43 @@
+.dropdown_error{
+  position: absolute;
+  min-width: 180px;
+  background: #e34844;
+  z-index: 100;
+  bottom: 12px;
+  right: -44%;
+  border-radius: 5px;
+  display: none;
+}
+.dropdown_error-login-text, .dropdown_error-pass-text, .dropdown_error-checkbox-text{
+  color: $text_color;
+  padding: 10px 40px;
+
+}
+.triangle_error{
+  border-top: 0px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid #e34844;
+  border-left: 15px solid transparent;
+  width: 0;
+  height: 0;
+  bottom: 32%;
+  position: absolute;
+  left: 0%;
+  margin-left: -20px;
+  transform: rotate(-90deg);
+
+  &:before{
+    content: "";
+    display: block;
+    border-top: 0px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid #e34844;
+    border-left: 15px solid transparent;
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: -15px;
+    bottom: -16px;
+  }
+}
+

@@ -5,7 +5,9 @@ block title
 
 block content
     include ./../sections/overlay_navigation
+
     .wrapper
+
         section.section.hero
 
             include ./../sections/hero_section
@@ -85,15 +87,18 @@ block content
                 .contact-with-me__title
                     .contact-with-me__title_text CONTACT ME
 
-                form(action="#").contact-me__form
-                    input(type="text" name="name" placeholder="Name").contact-me__form-input
-                    input(type="text" name="name" placeholder="Email").contact-me__form-input
-                    textarea(type="textarea" name="massege" placeholder="Massage").contact-me__form-input_textarea
-                    input(type="submit" value="Send").contact-me__form-button.contact-me__form-button-send
-                    input(type="reset" value="Reset").contact-me__form-button.contact-me__form-button-reset
+
+                form(name="form" action="#" method="get").contact-me__form
+                        input(type="text" name="name" placeholder="Name").contact-me__form-input.form_name-input
+
+                        input(type="text" name="name" placeholder="Email").contact-me__form-input.form_email-input
+                        textarea(type="textarea" name="massege" placeholder="Massage").contact-me__form-input_textarea
+                        input(type="submit" value="Send").contact-me__form-button.contact-me__form-button-send
+                        input(type="reset" value="Reset").contact-me__form-button.contact-me__form-button-reset
 
 
 
 
         .footer
             include ./../sections/footer.pug
+    include ./../sections/preload
